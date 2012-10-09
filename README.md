@@ -1,3 +1,3 @@
 #Prime Calculator
 
-142913828922
+Created to solve prime number problems at http://projecteuler.net/problems
