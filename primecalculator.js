@@ -81,16 +81,18 @@ PrimeCalculator.prototype.primeSum = function(minimum,maximum,limit) {
  * @return {Number}
  */
 PrimeCalculator.prototype.filterList = function(list, min, max) {
-	if(max > list.length)
+	if(max > list.length) {
 		throw {
-			name:'',
-			message:''
-		}
+			name:'OutOfBoundsException',
+			message:'"max" is outside the bounds of the given list'
+		};
+	}
+
 	if(min === max) return 0;
 	var filtered = [];
-	for(var i = min; i < max ; i++) {
+
+	for(var i = min; i < max ; i++)
 		filtered.push(list[i]);
-	}
 
 	return filtered;
 };
